@@ -12,22 +12,28 @@
             <next>
               <block type="movement_right" id="39">
                 <next>
-                  <block type="controls_repeat" id="63" inline="true">
-                    <value name="TIMES">
-                      <block type="math_random" id="70"></block>
+                  <block type="robot_delay" id="195" inline="true">
+                    <value name="DELAY">
+                      <block type="math_number" id="202">
+                        <field name="NUM">1500</field>
+                      </block>
                     </value>
-                    <statement name="DO">
-                      <block type="led_select" id="93" inline="true">
+                    <next>
+                      <block type="led_select" id="218" inline="true">
                         <field name="ACTION">ON</field>
                         <value name="LED">
-                          <block type="math_number" id="100">
+                          <block type="math_number" id="225">
                             <field name="NUM">4</field>
                           </block>
                         </value>
+                        <next>
+                          <block type="movement_stutter" id="263">
+                            <next>
+                              <block type="movement_stop" id="274"></block>
+                            </next>
+                          </block>
+                        </next>
                       </block>
-                    </statement>
-                    <next>
-                      <block type="movement_stutter" id="122"></block>
                     </next>
                   </block>
                 </next>
