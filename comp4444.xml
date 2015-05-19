@@ -1,1 +1,42 @@
-<xml xmlns="http://www.w3.org/1999/xhtml"></xml>
+<xml xmlns="http://www.w3.org/1999/xhtml">
+  <block type="movement_forward" id="19" x="205" y="30">
+    <next>
+      <block type="movement_left" id="29">
+        <next>
+          <block type="movement_leftmotor" id="49" inline="true">
+            <next>
+              <block type="movement_right" id="39">
+                <next>
+                  <block type="controls_repeat" id="63" inline="true">
+                    <value name="TIMES">
+                      <block type="math_random" id="70"></block>
+                    </value>
+                    <statement name="DO">
+                      <block type="led_select" id="93" inline="true">
+                        <field name="ACTION">ON</field>
+                        <value name="LED">
+                          <block type="math_number" id="100">
+                            <field name="NUM">10</field>
+                          </block>
+                        </value>
+                      </block>
+                    </statement>
+                    <next>
+                      <block type="movement_stutter" id="122"></block>
+                    </next>
+                  </block>
+                </next>
+              </block>
+            </next>
+          </block>
+        </next>
+      </block>
+    </next>
+  </block>
+  <block type="math_number" id="84" x="342" y="150">
+    <field name="NUM">68</field>
+  </block>
+  <block type="math_number" id="77" x="407" y="149">
+    <field name="NUM">9</field>
+  </block>
+</xml>
